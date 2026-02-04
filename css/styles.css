@@ -1,0 +1,10 @@
+body{
+    background-color: rgb(56, 194, 194);
+}
+.container{
+grid: 0;
+background-color: brown;
+border: dotted, 5px, whitesmoke;
+height: 500px;
+width: 800px;
+}
