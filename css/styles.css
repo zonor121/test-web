@@ -1,11 +1,34 @@
+:root {
+  --bg-color: burlywood;
+  --second-bg-color: black;
+  --text-color: black;
+  --second-text-color: white;
+  --footer-header-color: whitesmoke;
+  --hover-color: chocolate;
+  --zakaz-color: rgb(196, 117, 117);
+}
+@media(prefers-color-scheme: dark){
+  :root {
+    --bg-color: rgb(92, 80, 64);
+    --second-bg-color: rgb(156, 103, 103);
+    --text-color: whitesmoke;
+    --second-text-color: black;
+    --footer-header-color: whitesmoke;
+    --hover-color: chocolate;
+    --zakaz-color: rgb(196, 117, 117);
+  }
+}
+
+
+
 body {
   background-color: rgb(56, 194, 194);
 }
 
 .container {
   grid: 0;
-  background-color: rgb(129, 78, 78);
-  border: dotted, 5px, whitesmoke;
+  background-color: rgb(141, 78, 78);
+  border: dotted, 5px, var(--footer-header-color);
   height: 800px;
   width: 800px;
   margin-left: auto;
@@ -19,7 +42,7 @@ body {
 
 .block {
   border: double, 5px, black;
-  background-color: azure;
+  background-color: var(--footer-header-color);
   width: 150px;
   height: 150px;
 }
@@ -44,12 +67,13 @@ html,
 body {
   height: 100%;
   min-height: 100%;
+  color: var(--text-color);
 }
 
 .wrapper {
   max-width: 1360px;
   margin: 0 auto;
-  background-color: burlywood;
+  background-color: var(--bg-color);
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -63,7 +87,7 @@ main {
 
 header {
   min-height: 100px;
-  background-color: aliceblue;
+  background-color: var(--footer-header-color);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -89,7 +113,7 @@ header {
 
 footer {
   min-height: 60px;
-  background-color: aliceblue;
+  background-color: var(--footer-header-color);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -106,8 +130,8 @@ aside {
 }
 
 .zakaz {
-  background-color: rgb(100, 73, 73);
-  color: rgb(255, 255, 255);
+  background-color: var(--zakaz-color);
+  color: var(--text-color);
   border-radius: 5px;
   border: none;
   padding: 8px 15px;
@@ -149,8 +173,8 @@ aside {
 
 .zakaz:hover,
 .zakaz:focus {
-  box-shadow: 0 0 5px chocolate;
-  background-color: black;
+  box-shadow: 0 0 5px var(--hover-color);
+  background-color: var(--bg-color);
 }
 
 .drop-menu {
