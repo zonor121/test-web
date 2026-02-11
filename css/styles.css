@@ -55,101 +55,152 @@ body {
   min-height: 100%;
 }
 
-main{
-    flex-grow: 1;
-    display: flex;
-    flex-direction: row;
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
 }
 
-header{
-min-height: 100px;
-background-color: aliceblue;
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-padding-left: 20px;
-padding-right: 20px;
+header {
+  min-height: 100px;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.menushka{
-display: flex;
-flex-direction: row;
-list-style: none;
-gap: 25px;
+.menushka {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 25px;
 }
 
-.menushka a{
-    color: rgb(31, 97, 97);
+.menushka a {
+  color: rgb(31, 97, 97);
 }
 
-.menushka li{
-    flex-shrink: 0;
+.menushka li {
+  flex-shrink: 0;
 }
 
-footer{
-    min-height: 60px;
-    background-color: aliceblue;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+footer {
+  min-height: 60px;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-.content{
-padding: 20px;
+.content {
+  padding: 20px;
 }
 
-aside{
-background-color: aquamarine;
-width: 270px;
+aside {
+  background-color: aquamarine;
+  width: 270px;
 }
 
-.zakaz{
-    background-color: rgb(100, 73, 73);
-    color: rgb(255, 255, 255);
-    border-radius: 5px;
-    border: none;
-    padding: 8px 15px;
-    margin: 10px 15px;
-    cursor: pointer;
-    transition: 0.5s;
+.zakaz {
+  background-color: rgb(100, 73, 73);
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border: none;
+  padding: 8px 15px;
+  margin: 10px 15px;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
-.card img{
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 15px 15px 0px 0px;
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px 15px 0px 0px;
 }
 
-.catalog{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
+.catalog {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
 }
 
-.card{
-    width: 23%;
-    border: 1px solid black;
-    border-radius: 15px;
-    padding: 15px;
+.card {
+  width: 23%;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 15px;
 }
 
-.card h3{
-    color: rgb(56, 56, 52);
-    margin: 10px 15px;
+.card h3 {
+  color: rgb(56, 56, 52);
+  margin: 10px 15px;
 }
 
-.price1{
-    margin: 0px 15px;
+.price1 {
+  margin: 0px 15px;
 }
 
 .zakaz:hover,
-.zakaz:focus{
-    box-shadow: 0 0 5px chocolate;
-    background-color: black;
+.zakaz:focus {
+  box-shadow: 0 0 5px chocolate;
+  background-color: black;
 }
 
+.drop-menu {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.drop-menu svg {
+  /* fill: white; */
+  width: 44px;
+  height: 44px;
+}
+
+@media (max-width: 1920px) {
+  .drop-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 870px) {
+  .card {
+    width: 31%;
+  }
+}
+
+@media (max-width: 768px) {
+  aside {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .card {
+    width: 48%;
+  }
+}
+
+@media (max-width: 500px) {
+  .card img {
+    height: 150px;
+  }
+  .card {
+    width: 99%;
+  }
+
+  .drop-menu {
+    display: block;
+  }
+  .menushka {
+    display: none;
+  }
+}
